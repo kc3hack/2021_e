@@ -11,7 +11,7 @@ async fn main() -> Result<(), actix_web::Error> {
             .wrap(middleware::Logger::default())
             .service(Files::new("/", "./static/root").index_file("index.html"))
     })
-    .bind("localhost:8080")?
+    .bind("0.0.0.0:8080")?
     .run()
     .await?;
 
