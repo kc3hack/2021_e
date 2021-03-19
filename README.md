@@ -1,8 +1,9 @@
-# KC3Hack 2021 Template
+# KC3Hack 2021 Template 
 
 [![KC3Hack](https://kc3.me/hack/wp-content/uploads/2021/01/kc3hack2021ogp@2x.png)](https://kc3.me/hack)
 
 ## プロダクト名
+[![Rust](https://github.com/kc3hack/2021_e/actions/workflows/rust.yml/badge.svg)](https://github.com/kc3hack/2021_e/actions/workflows/rust.yml) <br>
 BookTree!
 
 ## プロダクト説明
