@@ -29,61 +29,7 @@ function draw() {
 
   // create a network
   var container = document.getElementById("mynetwork");
-  var options = {
-    manipulation: {
-      addNode: function (data, callback) {
-        // filling in the popup DOM elements
-        document.getElementById("operation").innerHTML = "Add Node";
-        document.getElementById("node-id").value = data.id;
-        document.getElementById("node-label").value = data.label;
-        document.getElementById("saveButton").onclick = saveData.bind(
-          this,
-          data,
-          callback
-        );
-        document.getElementById("cancelButton").onclick = clearPopUp.bind();
-        document.getElementById("network-popUp").style.display = "block";
-      },
-      editNode: function (data, callback) {
-        // filling in the popup DOM elements
-        document.getElementById("operation").innerHTML = "Edit Node";
-        document.getElementById("node-id").value = data.id;
-        document.getElementById("node-label").value = data.label;
-        document.getElementById("saveButton").onclick = saveData.bind(
-          this,
-          data,
-          callback
-        );
-        document.getElementById("cancelButton").onclick = cancelEdit.bind(
-          this,
-          callback
-        );
-        document.getElementById("network-popUp").style.display = "block";
-      },
-      addEdge: function (data, callback) {
-        if (data.from == data.to) {
-          var r = confirm("Do you want to connect the node to itself?");
-          if (r == true) {
-            callback(data);
-          }
-        } else {
-          callback(data);
-        }
-      },
-    },
-    configure: {
-      filter: function (option, path) {
-        if (path.indexOf("physics") !== -1) {
-          return true;
-        }
-        if (path.indexOf("smooth") !== -1 || option === "smooth") {
-          return true;
-        }
-        return false;
-      },
-      container: document.getElementById("config"),
-    },
-  };
+  var options = {};
   reload();
   network = new vis.Network(container, data, options);
 }
