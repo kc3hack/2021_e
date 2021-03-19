@@ -3,7 +3,7 @@ var network = null;
 var nodes, edges;
 nodes = new vis.DataSet();
 nodesArray = [
-  { id: 1, shape: "image", image: "../images/脱出成功.png" },
+  { id: 1, label: "Node 1" },
   { id: 2, label: "Node 2" },
   { id: 3, label: "Node 3" },
   { id: 4, label: "Node 4" },
@@ -172,6 +172,6 @@ async function reload() {
   for (const elem of books) {
     console.log(elem.title);
     var newId = (Math.random() * 1e7).toString(32);
-    nodes.add({ id: newId, shape: "image", image: elem.image });
+    nodes.add({ id: newId, shape: "image", image: elem.image, value: 20 });
   }
 }
