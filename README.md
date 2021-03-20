@@ -4,7 +4,7 @@
 
 ## プロダクト名
 [![Rust](https://github.com/kc3hack/2021_e/actions/workflows/rust.yml/badge.svg)](https://github.com/kc3hack/2021_e/actions/workflows/rust.yml) <br>
-BooksTree!
+Stella
 
 ## プロダクト説明
 読書生活を豊かにするwebアプリです．
