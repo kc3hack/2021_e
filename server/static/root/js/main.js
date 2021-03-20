@@ -103,3 +103,16 @@ async function reload() {
     booksData[newId] = elem;
   }
 }
+var lastKey;
+//inputでenterされたとき以外無視、enter時はreload();
+function tryReload() {
+  if (lastKey === "Enter") {
+    reload();
+    return;
+  }
+  return false;
+}
+
+window.document.onkeydown = function (event) {
+  lastKey = event.key;
+};
