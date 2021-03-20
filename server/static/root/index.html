@@ -25,8 +25,8 @@
       </button>
       -->
     </header>
-    <form class="searchformField">
-      <input class="searchField" type="search" placeholder="キーワードを入力" id="$q" value="ハッカソン" />
+    <form class="searchformField" onsubmit="return false;">
+      <input class="searchField" type="search" placeholder="キーワードを入力" id="$q" value="ハッカソン" onkeypress="reload();" />
       <button class="searchButton" type="button" name="name" id="search" value="value"  onclick="reload();">
       <i class="fas fa-search fa-lg"></i></button>
     </form>
