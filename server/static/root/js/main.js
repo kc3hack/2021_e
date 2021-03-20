@@ -87,11 +87,17 @@ async function searchBooks() {
   return items;
 }
 
+//flagがtrueならinterval中
+var intervalFlag;
 async function reload() {
+  //intervalFlagがtrueなら処理を止める
+  if (intervalFlag == true) {
+    return;
+  }
+  intervalFlag = true;
   var books = await searchBooks();
   nodes.clear();
   for (const elem of books) {
-    console.log(elem.title);
     var newId = (Math.random() * 1e7).toString(32);
     nodes.add({
       id: newId,
@@ -102,7 +108,16 @@ async function reload() {
     });
     booksData[newId] = elem;
   }
+
+  //interval
+  console.log("interval はじめ");
+  setTimeout(() => {
+    interval = false;
+    intervalFlag = false;
+    console.log("interval 終了");
+  }, 1000);
 }
+
 var lastKey;
 //inputでenterされたとき以外無視、enter時はreload();
 function tryReload() {
