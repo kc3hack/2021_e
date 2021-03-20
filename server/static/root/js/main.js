@@ -33,7 +33,14 @@ function draw() {
   reload();
   network = new vis.Network(container, data, options);
   network.on("click", function (params) {
+    //ノードがなければreturn
+    if (!booksData[params.nodes[0]]) {
+      return;
+    }
     console.log(booksData[params.nodes[0]]);
+    if (window.confirm("本のリンクに飛びますか？")) {
+      location.href = booksData[params.nodes[0]].link; // example_confirm.html へジャンプ
+    }
   });
 }
 
