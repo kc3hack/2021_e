@@ -2,7 +2,7 @@
 var network = null;
 var nodes, edges;
 nodes = new vis.DataSet();
-
+var booksData = {};
 nodes = new vis.DataSet();
 edges = new vis.DataSet();
 
@@ -32,6 +32,9 @@ function draw() {
   var options = {};
   reload();
   network = new vis.Network(container, data, options);
+  network.on("click", function (params) {
+    console.log(booksData[params.nodes[0]]);
+  });
 }
 
 function clearPopUp() {
@@ -90,6 +93,13 @@ async function reload() {
   for (const elem of books) {
     console.log(elem.title);
     var newId = (Math.random() * 1e7).toString(32);
-    nodes.add({ id: newId, shape: "image", image: elem.image, value: 20 });
+    nodes.add({
+      id: newId,
+      shape: "image",
+      image: elem.image,
+      value: 20,
+      label: elem.title,
+    });
+    booksData[newId] = elem;
   }
 }
