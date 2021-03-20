@@ -1,11 +1,8 @@
-body{
-    background-color: #F1F4F8;
-}
 
 #mynetwork {
     position: relative;
     width: 94%;
-    height: 600px;
+    height: 500px;
     border: 1px solid lightgray;
     margin: 0 auto;
 }
@@ -26,24 +23,46 @@ body{
     text-align: center;
 }
 
-#config {
+/*#config {
     float: left;
     width: 400px;
     height: 600px;
-}
+}*/
 
-header {
-    background-color: #ffffff;
-    color:#2F80ED;
-    display: -webkit-flex;
-    display: flex;
-    font-family: Avenir;
+#header {
+    background-color: #fff;
+    display: block;
     height: 60px;
+    user-select:none;
+    margin-bottom: 28px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
     -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
     align-items: center; /* 縦方向中央揃え */
-    cursor: pointer;
-    margin-bottom: 28px;
     }
+
+body{
+        background-color: #F1F4F8;
+        padding-top: 72px;
+    }
+
+h1{
+    color:#2F80ED;
+    font-size: 32px;
+    font-family: Avenir;
+    padding: 0px 40px;
+    margin-top: 12px;
+    /* @media (min-width: 1440px)
+    padding: 0px 80px;
+    @media (min-width: 950px)
+    padding: 0px 40px;
+    @media (min-width: 375px)
+    padding: 0px 20px;
+    メディアタイプに合わせてサイズを変えようとした残骸*/
+}
+
 
 .searchformField{
     margin-top: 28px;
@@ -60,6 +79,7 @@ header {
     width: 28px;
     height: 28px;
     background-color: #fff;
+    cursor: pointer;
 }
 input{
     outline: 0;
@@ -67,7 +87,7 @@ input{
     resize: none;
     width: 97%;
     margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Avenir, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.43;
 }
@@ -91,4 +111,8 @@ input{
     vertical-align: middle;
     text-align: center;
     font-size: 14px;
+}
+
+h2{
+
 }
