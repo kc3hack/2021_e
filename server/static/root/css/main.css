@@ -1,9 +1,12 @@
+body{
+    background-color: #F1F4F8;
+}
+
 #mynetwork {
     position: relative;
     width: 94%;
     height: 600px;
     border: 1px solid lightgray;
-    cursor: grab;
     margin: 0 auto;
 }
 
@@ -28,6 +31,7 @@
     width: 400px;
     height: 600px;
 }
+
 header {
     background-color: #ffffff;
     color:#2F80ED;
@@ -38,8 +42,37 @@ header {
     -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
     align-items: center; /* 縦方向中央揃え */
     cursor: pointer;
+    margin-bottom: 28px;
     }
-button{
+
+.searchformField{
+    margin-top: 28px;
+    padding: 12px 20px;
+    background-color: #fff;
+    width: 72%;
+    margin: 0 auto;
+    border-radius: 36px;
+    display:flex;
+    justify-content: space-between;
+}
+.searchButton{
+    border: none;
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+}
+input{
+    outline: 0;
+    border: none;
+    resize: none;
+    width: 97%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.43;
+}
+
+.reloadButton{
     background-color: #2F80ED;
     color:#ffffff;
     height: 42px;
