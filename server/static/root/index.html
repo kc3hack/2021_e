@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Network | Manipulation</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.js"></script>
+    <script src="https://kit.fontawesome.com/dbce1fa769.js" crossorigin="anonymous"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis-network.min.css"
       rel="stylesheet"
@@ -13,15 +14,22 @@
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/main.js"></script>
   </head>
-
-  <body bgcolor="F1F4F8" onload="draw();">
-    <input class="input bg-white mb16" type="search" id="$q" />
-    <header id="Trend Tree">
-      <h1>BooksTree!</h1>
-      <button type="button" name="name" value="value" onclick="reload();">
-        reload
+  <body onload="draw();">
+    <header id="header">
+      <div class="pageHeader">
+       <h1>BooksTree!</h1>
+      </div>
+      <!--
+      <button class="reloadButton" type="button" name="name" value="value" onclick="reload();">
+        更新する
       </button>
+      -->
     </header>
+    <form class="searchformField">
+      <input class="searchField" type="search" placeholder="キーワードを入力" id="$q" />
+      <button class="searchButton" type="submit" name="name" id="search" value="value">
+      <i class="fas fa-search fa-lg"></i></button>
+    </form>
     <div id="network-popUp">
       <span id="operation">node</span>
       <br />
@@ -44,6 +52,12 @@
     </div>
     <br />
     <div id="mynetwork"></div>
+    <!--
     <div id="config"></div>
+  -->
+  <div class="howToUse">
+    <h2>Find new world.</h2>
+    <br>BooksTreeは日常で気になったワードから新しい本に出会うためのサービスです。</br>ほげ</br>ほげ</br>ほげ</br>ほげ</br>ほげ</br>ほげ</br>ほげ</br></p>
+  </div>
   </body>
 </html>
