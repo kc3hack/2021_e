@@ -69,7 +69,7 @@ async function searchBooks() {
   var endpoint = "https://www.googleapis.com/books/v1";
 
   // 検索 API を叩く
-  var res = await fetch(`${endpoint}/volumes?q=${$q.value}`);
+  var res = await fetch(`${endpoint}/volumes?q=${$q.value}&maxResults=40`);
   // JSON に変換
   var data = await res.json();
 
