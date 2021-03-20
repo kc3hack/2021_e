@@ -17,7 +17,7 @@
   <body onload="draw();">
     <header id="header">
       <div class="pageHeader">
-       <h1>BooksTree!</h1>
+       <h1>Stella</h1>
       </div>
       <!--
       <button class="reloadButton" type="button" name="name" value="value" onclick="reload();">
@@ -25,8 +25,8 @@
       </button>
       -->
     </header>
-    <form class="searchformField" onsubmit="return false;">
-      <input class="searchField" type="search" placeholder="キーワードを入力" id="$q" value="ハッカソン" onkeyup="tryReload();" />
+    <form class="searchformField">
+      <input class="searchField" type="search" placeholder="キーワードを入力" id="$q" value="ハッカソン" />
       <button class="searchButton" type="button" name="name" id="search" value="value"  onclick="reload();">
       <script>
         var word_list = [
@@ -83,9 +83,30 @@
     <!--
     <div id="config"></div>
   -->
-  <div class="howToUse">
-    <h2>Find new world.</h2>
-    <br>BooksTreeは日常で気になったワードから新しい本に出会うためのサービスです。</br>ほげ</br>ほげ</br>ほげ</br>ほげ</br>ほげ</br>ほげ</br>ほげ</br></p>
+  <div class="introduction">
+    <div class="introductionVisual">
+    <h2 class=introTitle>Find</br>new</br>world<span id="period">.</span></h2>
+    <img class="girl" src="./images/girl.png">
+    <img class="Saturn" src="./images/Saturn.png">
+    </div>
+  <p class=introDescription>Stellaは日常で気になったワードから新しい本に出会うためのサービスです。</p>
+  </div>
+    <div class="howToUse">
+    <h2 class=howToUseTitle>新しい本との出会いかた</h2>
+    <div class="howToUseStep">
+    <div class="howToUse01">
+      <img src="./images/how-to-use_01.png">
+      <p class="howToUseText">気になったワードを入れる</p>
+    </div>
+    <div class="howToUse02">
+      <img src="./images/how-to-use_02.png">
+      <p class="howToUseText">漂う本の中から気になる1冊を</p>
+    </div>
+    <div class="howToUse03">
+      <img src="./images/how-to-use_03.png">
+      <p class="howToUseText">リンクから本を手に入れよう</p>
+    </div>
+    </div>
   </div>
   </body>
 </html>

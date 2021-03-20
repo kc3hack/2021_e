@@ -71,7 +71,7 @@ function add(title, imagepath) {
 }
 
 // 本を検索して結果を返す
-async function searchBooks() {
+  async function searchBooks() {
   // Google Books APIs のエンドポイント
   var endpoint = "https://www.googleapis.com/books/v1";
 
