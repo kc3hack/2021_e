@@ -28,6 +28,17 @@
     <form class="searchformField" onsubmit="return false;">
       <input class="searchField" type="search" placeholder="キーワードを入力" id="$q" value="ハッカソン" onkeyup="tryReload();" />
       <button class="searchButton" type="button" name="name" id="search" value="value"  onclick="reload();">
+      <script>
+        var word_list = [
+          'PHP',
+          'HTML',
+          'CSS',
+          'JavaScript',
+          'htaccess'
+        ];
+        var word = word_list[Math.floor(Math.random() * 5)];
+        document.getElementById('$q').value = word;
+      </script>
       <i class="fas fa-search fa-lg"></i></button>
     </form>
     <div id="network-popUp">
