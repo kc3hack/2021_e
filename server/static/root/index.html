@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Network | Manipulation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.js"></script>
+    <script src="https://kit.fontawesome.com/dbce1fa769.js" crossorigin="anonymous"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis-network.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/main.js"></script>
+  </head>
+  <body onload="draw();">
+    <header id="header">
+      <div class="pageHeader">
+        <img class="logo" src="./images/logo.png">
+      </div>
+      <!--
+      <button class="reloadButton" type="button" name="name" value="value" onclick="reload();">
+        更新する
+      </button>
+      -->
+    </header>
+    <form class="searchformField" onsubmit="return false;" >
+      <input class="searchField" type="search" placeholder="キーワードを入力" id="$q" value="ハッカソン" onkeyup="tryReload();"/>
+      <button class="searchButton" type="button" name="name" id="search" value="value"  onclick="reload();">
+      <script>
+        var word_list = [
+          'コミック',
+          'ライトノベル',
+          '雑誌',
+          '絵本',
+          'ビジネス',
+          '経済',
+          '文学',
+          '評論',
+          'コンピュータ',
+          'IT',
+          '医学',
+          '人文',
+          '教育',
+          '受験',
+          '政治',
+          '社会',
+          'ノンフィクション',
+          '建築',
+          'デザイン',
+          '語学',
+          '就職',
+          '資格'
+        ];
+        var word = word_list[Math.floor(Math.random() * 22)];
+        document.getElementById('$q').value = word;
+      </script>
+      <i class="fas fa-search fa-lg"></i></button>
+    </form>
+    <div id="network-popUp">
+      <span id="operation">node</span>
+      <br />
+      <table style="margin: auto">
+        <tr>
+          <td>id</td>
+          <td>
+            <input id="node-id" value="new value" />
+          </td>
+        </tr>
+        <tr>
+          <td>label</td>
+          <td>
+            <input id="node-label" value="new value" />
+          </td>
+        </tr>
+      </table>
+      <input type="button" value="save" id="saveButton" />
+      <input type="button" value="cancel" id="cancelButton" />
+    </div>
+    <br />
+    <div id="mynetwork"></div>
+    <!--
+    <div id="config"></div>
+  -->
+  <div class="introduction">
+    <div class="introductionVisual">
+    <h2 class=introTitle>Find</br>new</br>world<span id="period">.</span></h2>
+    <img class="book1" src="./images/book1.png">
+    <img class="book2" src="./images/book2.png">
+    <img class="girl" src="./images/girl.png">
+    <img class="Saturn" src="./images/Saturn.png">
+    <img class="book3" src="./images/book3.png">
+    </div>
+  <p class=introDescription>Stellaは日常で気になったワードから新しい本に出会うためのサービスです。</p>
+  </div>
+    <div class="howToUse">
+    <h2 class=howToUseTitle>新しい本との出会いかた</h2>
+    <div class="howToUseStep">
+    <div class="howToUse01">
+      <img src="./images/how-to-use_01.png">
+      <p class="howToUseText">気になったワードを入れる</p>
+    </div>
+    <div class="howToUse02">
+      <img src="./images/how-to-use_02.png">
+      <p class="howToUseText">漂う本の中から気になる1冊を</p>
+    </div>
+    <div class="howToUse03">
+      <img src="./images/how-to-use_03.png">
+      <p class="howToUseText">リンクから本を手に入れよう</p>
+    </div>
+    </div>
+  </div>
+  <footer id="footer">
+    <p class="footerText">©2021 teamEZ</p>
+    </footer>
+  </body>
+</html>
