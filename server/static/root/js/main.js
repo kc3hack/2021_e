@@ -38,7 +38,7 @@ function draw() {
       return;
     }
     console.log(booksData[params.nodes[0]]);
-    if (window.confirm("本のリンクに飛びますか？")) {
+    if (window.confirm("Googlebookで本の詳細を確認しますか？")) {
       location.href = booksData[params.nodes[0]].link; // example_confirm.html へジャンプ
     }
   });
