@@ -25,8 +25,8 @@
       </button>
       -->
     </header>
-    <form class="searchformField">
-      <input class="searchField" type="search" placeholder="キーワードを入力" id="$q" value="ハッカソン" />
+    <form class="searchformField" onsubmit="return false;" >
+      <input class="searchField" type="search" placeholder="キーワードを入力" id="$q" value="ハッカソン" onkeyup="tryReload();"/>
       <button class="searchButton" type="button" name="name" id="search" value="value"  onclick="reload();">
       <script>
         var word_list = [
