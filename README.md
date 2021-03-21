@@ -30,3 +30,9 @@ cd server
 ```
 docker-compose up --build
 ```
+<br>
+
+4. サイトにアクセス
+```
+http://localhost:8080
+```
