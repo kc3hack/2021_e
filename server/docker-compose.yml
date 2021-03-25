@@ -6,3 +6,16 @@ services:
     ports:
       - "127.0.0.1:8080:8080"
     command: cargo run --release
+
+  nginx:
+    build: ./nginx
+    volumes:
+      - kc3-static:/app/static/root
+    tty: true
+    ports:
+      - "127.0.0.1:8000:80"
+    depends_on:
+      - app
+
+volumes:
+  kc3-static:
